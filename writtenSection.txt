@@ -1,28 +1,55 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
+    The use of semantics in building the Structure of your page. Ex: <UserBox/> instead of <div/>
+
 
 2. What is the box model?
+    Box model is in reference to everything visually in HTML and CSS being box shaped. 
+    Each box includes the margin, border, padding and content.
 
 3. What is the difference between IDs and Classes?
+    Classes can be shared between multiple things, ID's are uniqe and can't be shared.
 
 4. What does the z-index do?
+    Aligns the placement of items on top of eachother. 
+    Something placed on z-index 100 will be on top of something z-index 20
 
 5. Summarize what the keyword 'this' is used for?
+    'this' is entirely dependent on how it's called. I would describe it as 
+        referencing its container. 
 
 6. What is a callback?
+    A function being called within a function
 
 7. What is a closure?
+    A function being returned by a function
 
 8. How does prototype work?
+    Making a new prototype attaches data or functionallity to an already existing data type or constructor
+        that allows all of that type access to what the prototype entails. 
 
 9. What is MVC?
+    Model View Controller, a popular way to structure applications.
+    It includes the Model or the structure,
+    the View which is what the user can see and interact with
+    and the Controller takes what the user manipulates and passes that through the model and view
 
 10. What is the component lifecycle?
+    Small bits of time during the pre-rendering, rendering, re-rendering, and unmounting throughout 
+        the lifetime of individual components in react.
+
+    componentWillMount -> componentDidMount -> componentWillRecieveProps -> shouldComponentUpdate -> 
+        componentWillUpdate -> componentDidUpdate -> componentWillUnmount
+
 
 11. What is REST?
+    Representational state transfer
+
 
 12. Name three ways of getting data from the URL using express
+    req.params "/api/:stuff", req.body(for POST) and req.query ?thing=stuff
+
 
 create table users (
 id serial,
@@ -33,9 +60,14 @@ email varchar(255)
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
+    SELECT * FROM users
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+    INSERT INTO users(name, email)
+    VALUES ('your name', 'fake@fake.com')
 
 -Update the newly created user's name to 'Bobby Boy':
+    UPDATE users SET name = 'Bobby Boy' WHERE email = 'fake@fake.com'
 
 -Delete the newly updated user:
+    DELETE FROM users WHERE name = 'Bobby Boy'
